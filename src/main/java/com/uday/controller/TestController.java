@@ -18,13 +18,13 @@ public class TestController {
 	
 	@GetMapping("/test")
 	public String test(String name) {
-		LOG.info("Test controller /test");
+		LOG.info("Test controller /test - maven");
 		return "welcome = " + name; 
 	}
 
 	@GetMapping("/greeting")
 	public ModelAndView greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		LOG.info("Test controller /greeting");
+		LOG.info("Test controller /greeting - maven");
 		ModelAndView modelAndView = new ModelAndView("greeting");
 		model.addAttribute("name", name);
 		return modelAndView;
