@@ -24,7 +24,7 @@ public class TestController {
 
 	@GetMapping("/greeting")
 	public ModelAndView greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-		LOG.info("Test controller /greeting - maven");
+		LOG.info("Test controller /greeting - maven - 01");
 		ModelAndView modelAndView = new ModelAndView("greeting");
 		model.addAttribute("name", name);
 		return modelAndView;
